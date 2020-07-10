@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+h3{
+    text-align: center;
+}
+body{
+    background-color:teal;
+}
+
+       </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="/home">HOME</a></li>
+        <li><a href="/home/eventlist">EVENTS</a></li>
+        <li class="active" ><a href="/home/register">REGISTERATION</a></li>
+        <li ><a href="/home/contact">CONTACT US</a></li>
+        <li><a href="/home/winner">WINNERS</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="/home/register"><span class="glyphicon glyphicon-log-in"></span> REGISTER NOW</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<h3>REGISTERATION FORM</h3>
+
+<div class="container">
+  <form action="/home" method="POST">
+    <label for="fname">NAME</label>
+    <input type="text" id="fname" name="student[name]" placeholder="Your name..">
+
+    <label for="lname">DEPARTMENT</label>
+    <input type="text" id="lname" name="student[department]" placeholder="Your department ..">
+
+    <label for="lname">RRN</label>
+    <input type="text" id="lname" name="student[rrn]" placeholder="Your rrn..">
+
+    <label for="lname">PHONE NUMBER</label>
+    <input type="text" id="lname" name="student[phone]" placeholder="Your phone number..">
+
+    
+    <label for="lname">E-MAIL ADDRESS</label>
+    <input type="text" id="lname" name="student[email]" placeholder="Your mail id ..">
+
+    <label for="EVENTS"> SELECT EVENT</label>
+    <select id="EVENTS" name="student[event]">
+      <option value="singing">Singing</option>
+      <option value="dancing">Dancing</option>
+      <option value="dramatix">Dramatix</option>
+      <option value="talent show">Talent Show</option>
+      <option value="fashion show">Fashion Show</option>
+    </select>
+
+    <label for="subject">ABOUT YOUR TALENT</label>
+    <textarea id="subject" name="student[about]" placeholder="Write something.." style="height:200px"></textarea>
+
+    <button>
+		Submit
+	  </button>
+  </form>
+</div>
+
+<footer class="container-fluid text-center">
+    <p>Footer Text</p>
+  </footer>
+  
+  </body>
+  </html>
